@@ -4,34 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kulineri | Daftar</title>
-    <link rel="stylesheet" type="text/css" href="loginstyle.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container lg items-center mx-9">
         <div class="text-center">
-            <img class="mb-4" src="img/kulineri.png" alt="logo" width="150" height="">
+            <img class="mt-20 mb-10" src="assets/logo/kulineri-logo.png" width="150" height="">
         </div>
-        <form class="form-login border">
-            <h1 class="h3 mb-3 font-weight-bolder text-center">Daftar</h1>
+        <form class="form-login border rounded-xl max-w-sm p-10">
+            <h1 class="text-2xl font-bold mb-6 text-center">Daftar</h1>
 
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control border w-full rounded h-8" id="email" placeholder="" required>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control border w-full rounded h-8" id="password" placeholder="" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirmpassword" class="form-label">Confirm Password</label>
             </div>
             <div class="mb-5">
-                <label for="confirm-password" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" id="confirm-password" placeholder="" required>
+                <input type="password" class="form-control border w-full rounded h-8" id="confirmpassword" placeholder="" required>
             </div>
 
-            <button class="btn btn-lg btn-block mb-5" id="btnSubmit" type="submit">Daftar</button>
+            <button class="bg-red-700 rounded py-3 my-5 text-white w-full text-lg font-semibold" id="btnSubmit" type="submit">Daftar</button>
 
-            <p class="text-center">Sudah punya akun? <a href="login.html">Masuk</a></p>
+            <p class="text-center">Sudah punya akun? <a href="login.html" class="text-sky-500 hover:underline">Masuk</a></p>
         </form>
     </div>
 
