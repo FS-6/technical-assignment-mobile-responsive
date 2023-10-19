@@ -61,6 +61,9 @@ incButton.onclick = () => {
   totalOrder.textContent = total += 1;
   totalPrice.textContent = formatCurrency(price * total);
   subTotal.textContent = formatCurrency(price * total);
+
+  sessionStorage.setItem("totalItems", total);
+  sessionStorage.setItem("totalPrice", price * total);
 };
 
 decButton.onclick = () => {
@@ -69,6 +72,9 @@ decButton.onclick = () => {
     totalOrder.textContent = total;
     totalPrice.textContent = formatCurrency(price * total);
     subTotal.textContent = formatCurrency(price * total);
+
+    sessionStorage.setItem("totalItems", total);
+    sessionStorage.setItem("totalPrice", price * total);
   }
 };
 
