@@ -1,4 +1,3 @@
-const URL = "https://6526b95b917d673fd76ce548.mockapi.io/products";
 const listProduct = document.getElementById("product-container");
 
 function formatCurrency(number) {

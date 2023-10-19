@@ -21,7 +21,7 @@ form.addEventListener("submit", function(event) {
 
         if (userFound) {
             alert('Login berhasil');
-            window.location.href = "dashboard.html";
+            window.location.href = "../page/dashboard.html";
         } else {
             alert('Login gagal. Periksa kembali email dan password.');
         }
