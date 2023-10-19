@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detail Produk | Kulineri</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg navbar-light py-3 bg-white sticky-top">
+      <div class="container gap-4 d-flex align-items-center">
+        <a class="navbar-brand" href="dashboard.html">
+          <img src="../assets/logo/kulineri-logo.png" alt="kulineri-logo" class="w-75" />
+        </a>
+        <div class="sticky-top w-75">
+          <div class="container-fluid">
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Cari oleh-oleh disini. . . ."
+                aria-label="Search"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <a href="keranjang.html">
+            <i class="fas fa-cart-shopping text-danger h4 border-end pe-3"></i>
+          </a>
+          <div class="d-flex align-items-center justify-between gap-2">
+            <i class="fas fa-circle-user text-danger h4"></i>
+            <p>Owi</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container detail-produk mt-2">
+      <h3 class="detail-produk1">Detail Produk</h3>
+      <div class="row rectangle-parent"></div>
+      <div class="row rectangle-parent">
+        <div class="col-md-4 mt-2">
+          <div class="rectangle-parent">
+            <img
+              class="w-100 rounded"
+              alt="product-img"
+              src=""
+              id="product-img-detail"
+            />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="group-parent">
+            <div class="pie-susu-bali-isi-20-pcs-parent pb-4">
+              <div class="pie-susu-bali">
+                <strong><h2 class="h2" id="product-name-detail"></h2></strong>
+              </div>
+              <i class="terjual"
+                ><small class="text-muted">18 Terjual</small></i
+              >
+              <i class="fas fa-star text-warning"></i>
+              <i class="rating">4.8</i>
+              <div
+                class="asal mt-2 text-secondary"
+                id="product-from-detail"
+              ></div>
+              <div>
+                <strong
+                  ><span class="h4" id="product-price-detail"></span
+                ></strong>
+              </div>
+            </div>
+            <div class="border-top pt-2 d-flex justify-content-between">
+              <p>Stok tersedia</h>
+              <p>60 pcs</p>
+            </div>
+            <div class="jumlah-pesanan-parent d-flex align-items-center justify-content-between">
+              <p class="jumlah-pesanan">Jumlah pesanan</p>
+              <div class="d-flex align-items-start gap-3">
+                <button type="button" class="btn border" id="decButton">-</button>
+                <p id="total-order"></p>
+                <button type="button" class="btn border" id="incButton">+</button>
+              </div>
+            </div>
+            <hr />
+            <div class="deskripsi-produk-parent">
+              <b class="deskripsi-produk">Deskripsi Produk</b>
+              <div class="pie-susu-atau-container mt-2">
+                <p class="pie-susu-atau">
+                  Pie susu atau pastei susu adalah sebuah hidangan penutup
+                  tradisional Indonesia yang terbuat dari kue pastri yang diisi
+                  dengan kustar telur serta susu kental manis. Pastri tersebut
+                  sangat datar dengan isian hanya terdiri dari satu lapisan
+                  kustar yang sangat tipis. Asal pastri tersebut berasal dari
+                  Bali.
+                </p>
+                <p class="pie-susu-atau mt-2">
+                  <strong>Tahan 6 hari di suhu ruang.</strong>
+                </p>
+                <p class="pie-susu-atau">
+                  <strong>Tahan 10 hari di kulkas.</strong>
+                </p>
+                <p class="pie-susu-atau">
+                  <strong>Dikirim dari Jakarta.</strong>
+                </p>
+                <p class="pie-susu-atau">
+                  <strong>Tanggal kadaluarsa: 19 Desember 2023</strong>
+                </p>
+              </div>
+              <hr />
+            </div>
+            <b class="ulasan">Ulasan</b>
+            <div class="rectangle-parent2 pt-2 pb-4">
+              <div class="group-child3"></div>
+              <div class="varian-keju-parent">
+                <div class="varian-keju mt-2">
+                  <i class="fas fa-user text-danger"></i> username1 |
+                  <i class="fas fa-star text-warning"></i> 4.8
+                </div>
+                <i class="terjual"
+                  ><small class="text-secondary">Varian: Keju</small></i
+                >
+                <div class="enak-bgt-top">Enak banget. Top!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-2">
+          <div class="card">
+            <div class="card-body">
+              <b class="ringkasan-belanja">Ringkasan belanja</b>
+              <div class="subtotal-parent d-flex align-items-center justify-content-between mt-2">
+                <h6 class="subtotal">Subtotal</h6>
+                <p id="product-total-price"></p>
+              </div>
+              <div class="total-diskon-parent d-flex align-items-center justify-content-between mt-2">
+                <div class="subtotal">Total Diskon</div>
+                <div class="rp-0 text-end">Rp 0</div>
+              </div>
+              <hr />
+              <div class="rp-110000-parent text-end">
+                <h4 class="font-bold" id="subtotal"></h4>
+              </div>
+              <div class="detail-produk-inner">
+                <div class="rectangle-group">
+                  <div class="group-item mt-4"></div>
+                  <a href="checkout.html" class="btn btn-danger w-100 btn-primary keranjang">
+                    Beli
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../script/detailProduct.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

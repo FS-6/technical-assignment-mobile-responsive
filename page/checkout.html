@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Checkout - Kulineri</title>
+  </head>
+  <body>
+    <header class="w-full bg-zinc-50 py-4 fixed top-0">
+      <nav class="max-w-7xl mx-auto px-5">
+        <a href="dashboard.html">
+          <img
+            src="../assets/logo/kulineri-logo.png"
+            alt="kulineri-logo"
+            class="w-32"
+          />
+        </a>
+      </nav>
+    </header>
+    <main class="w-full">
+      <section class="max-w-6xl mx-auto px-5 mt-24 mb-10 flex flex-wrap gap-8">
+        <div class="w-full md:w-[60%]">
+          <div class="bg-zinc-50 p-5 border rounded-md mb-8">
+            <span>
+              Ini halaman terakhir dari proses belanjamu. Pastikan semua sudah
+              benar, ya. :)</span
+            >
+          </div>
+          <div class="mb-8">
+            <h1 class="text-lg font-semibold mb-3">Produk di Beli</h1>
+            <div class="flex gap-5 p-2 border rounded-md bg-zinc-50 shadow-sm">
+              <img
+                src=""
+                alt="product-img"
+                class="w-[100px]"
+                id="product-image"
+              />
+              <div class="w-full">
+                <h3 class="font-medium text-lg mb-[2px]" id="product-name"></h3>
+                <h5 class="mb-4 text-sm">Original</h5>
+                <div class="flex justify-between">
+                  <p id="product-price"></p>
+                  <span class="font-semibold" id="total-price"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h1 class="text-lg font-semibold mb-3">
+              Pengiriman dan Pembayaran
+            </h1>
+            <form action="" method="post" id="checkout-form">
+              <div class="mb-4 bg-zinc-50 p-4 border rounded-sm">
+                <h1 class="font-sm mb-2">
+                  <span class="bg-zinc-200 p-1 rounded-sm text-xs font-semibold"
+                    >Utama</span
+                  >
+                  Istana Negara -
+                  <span class="font-medium">Jokowi</span>
+                </h1>
+                <p class="text-xs font-extralight">
+                  Jalan Bunga Mawar No.111 RT00/RW00 Kel. Jatimerak, Kec. Pondok
+                  Terong
+                </p>
+                <p class="text-xs font-extralight">
+                  Kota Jakarta Barat, DKI Jakarta 11119
+                </p>
+              </div>
+              <div class="mb-6 flex flex-col">
+                <label for="pengiriman" class="font-semibold pb-3"
+                  >Pilih Pengiriman</label
+                >
+                <select
+                  name="pengiriman"
+                  id="opsi-pengiriman"
+                  class="w-full p-2 border rounded-md"
+                >
+                  <option value="JNE">JNE</option>
+                  <option value="Si Cepat">Si Cepat</option>
+                </select>
+                <div class="p-2">
+                  <p class="text-sm font-medium" id="tarif-pengiriman"></p>
+                </div>
+              </div>
+              <div class="mb-6 flex flex-col">
+                <label for="pembayaran">Pilih Pembayaran</label>
+                <select
+                  name="pembayaran"
+                  id="opsi-pembayaran"
+                  class="w-full p-2 border rounded-md"
+                >
+                  <option value="QRIS">Qris</option>
+                  <option value="COD">Cod</option>
+                </select>
+                <div class="p-2">
+                  <p class="text-sm font-medium" id="tarif-pembayaran"></p>
+                </div>
+              </div>
+              <div>
+                <input
+                  type="submit"
+                  value="konfirmasi"
+                  class="w-full border rounded-md bg-red-700 text-white p-3 cursor-pointer"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          class="w-full md:w-[35%] bg-zinc-50 p-5 border rounded-md"
+          style="height: max-content"
+        >
+          <h1 class="font-semibold mb-5">Ringkasan Belanja</h1>
+          <div class="pb-5">
+            <h3 class="font-semibold mb-2">Total Belanja</h3>
+            <div class="flex justify-between mb-1">
+              <p>Total Harga</p>
+              <p id="product-price-end"></p>
+            </div>
+            <div class="flex justify-between mb-1">
+              <p>Total Ongkos Kirim</p>
+              <span id="shipping-fee"></span>
+            </div>
+            <div class="flex justify-between mb-5">
+              <p>Total Diskon</p>
+              <span>Rp. 0</span>
+            </div>
+            <div class="flex justify-between border-y-2 py-4">
+              <p class="text-base font-semibold">Total Tagihan</p>
+              <p id="sub-total"></p>
+            </div>
+          </div>
+          <button
+            class="p-2 bg-red-700 text-white w-full rounded-md"
+            id="buy-btn"
+          >
+            Bayar Pesanan
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="../script/checkout.js"></script>
+  </body>
+</html>

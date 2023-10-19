@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulineri | Daftar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="w-full min-h-screen">
+    <div class="max-w-xl mx-auto px-10">
+        <div class="flex justify-center">
+            <img class="mt-20 mb-10" src="../assets/logo/kulineri-logo.png" width="150" height="">
+        </div>
+        <form class="form-register border rounded-xl p-10" method="post" id="form-register">
+            <h1 class="text-2xl font-bold mb-6 text-center">Daftar</h1>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control border w-full rounded h-8" id="email" placeholder="" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control border w-full rounded h-8" id="password" placeholder="" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirmpassword" class="form-label">Confirm Password</label>
+            </div>
+            <div class="mb-5">
+                <input type="password" class="form-control border w-full rounded h-8" id="confirmpassword" placeholder="" required>
+            </div>
+
+            <button class="bg-red-700 rounded py-3 my-5 text-white w-full text-lg font-semibold" id="btnSubmit" type="submit">Daftar</button>
+
+            <p class="text-center">Sudah punya akun? <a href="login.html" class="text-sky-500 hover:underline">Masuk</a></p>
+        </form>
+    </div>
+
+    <script src="../script/register.js"></script>
+</body>
+</html>
