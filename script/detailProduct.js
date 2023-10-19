@@ -38,6 +38,9 @@ productDetail.map((item) => {
   price = item.price;
 });
 
+totalOrder.textContent = "0";
+totalPrice.textContent = "Rp. 0";
+
 incButton.onclick = () => {
   totalOrder.textContent = total += 1;
   totalPrice.textContent = `Rp. ${price * total}`;
