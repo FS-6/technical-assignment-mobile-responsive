@@ -29,16 +29,17 @@
             <h1 class="text-lg font-semibold mb-3">Produk di Beli</h1>
             <div class="flex gap-5 p-2 border rounded-md bg-zinc-50 shadow-sm">
               <img
-                src="assets/product/pie.png"
+                src=""
                 alt="product-img"
-                class="h-full"
+                class="w-[100px]"
+                id="product-image"
               />
               <div class="w-full">
-                <h3 class="font-medium text-lg mb-[2px]">Pie Susu Khas Bali</h3>
+                <h3 class="font-medium text-lg mb-[2px]" id="product-name"></h3>
                 <h5 class="mb-4 text-sm">Original</h5>
                 <div class="flex justify-between">
-                  <p>Rp. 55.000</p>
-                  <span class="font-semibold">Total Rp. 110.000</span>
+                  <p id="product-price"></p>
+                  <span class="font-semibold" id="total-price"></span>
                 </div>
               </div>
             </div>
@@ -47,7 +48,7 @@
             <h1 class="text-lg font-semibold mb-3">
               Pengiriman dan Pembayaran
             </h1>
-            <form action="" method="post">
+            <form action="" method="post" id="checkout-form">
               <div class="mb-4 bg-zinc-50 p-4 border rounded-sm">
                 <h1 class="font-sm mb-2">
                   <span class="bg-zinc-200 p-1 rounded-sm text-xs font-semibold"
@@ -64,29 +65,35 @@
                   Kota Jakarta Barat, DKI Jakarta 11119
                 </p>
               </div>
-              <div class="mb-4 flex flex-col">
+              <div class="mb-6 flex flex-col">
                 <label for="pengiriman" class="font-semibold pb-3"
                   >Pilih Pengiriman</label
                 >
                 <select
                   name="pengiriman"
-                  id="pengiriman"
+                  id="opsi-pengiriman"
                   class="w-full p-2 border rounded-md"
                 >
-                  <option value="jne">JNE</option>
-                  <option value="si cepat">Si Cepat</option>
+                  <option value="JNE">JNE</option>
+                  <option value="Si Cepat">Si Cepat</option>
                 </select>
+                <div class="p-2">
+                  <p class="text-sm font-medium" id="tarif-pengiriman"></p>
+                </div>
               </div>
-              <div class="mb-4 flex flex-col">
-                <label for="pengiriman">Pilih Pembayaran</label>
+              <div class="mb-6 flex flex-col">
+                <label for="pembayaran">Pilih Pembayaran</label>
                 <select
                   name="pembayaran"
-                  id="pembayaran"
+                  id="opsi-pembayaran"
                   class="w-full p-2 border rounded-md"
                 >
-                  <option value="Qris">Qris</option>
-                  <option value="Cod">Cod</option>
+                  <option value="QRIS">Qris</option>
+                  <option value="COD">Cod</option>
                 </select>
+                <div class="p-2">
+                  <p class="text-sm font-medium" id="tarif-pembayaran"></p>
+                </div>
               </div>
               <div>
                 <input
@@ -107,11 +114,11 @@
             <h3 class="font-semibold mb-2">Total Belanja</h3>
             <div class="flex justify-between mb-1">
               <p>Total Harga</p>
-              <span>Rp. 110.000</span>
+              <p id="product-price-end"></p>
             </div>
             <div class="flex justify-between mb-1">
               <p>Total Ongkos Kirim</p>
-              <span>Rp. 35.000</span>
+              <span id="shipping-fee"></span>
             </div>
             <div class="flex justify-between mb-5">
               <p>Total Diskon</p>
@@ -119,7 +126,7 @@
             </div>
             <div class="flex justify-between border-y-2 py-4">
               <p class="text-base font-semibold">Total Tagihan</p>
-              <span>Rp. 145.000</span>
+              <p id="sub-total"></p>
             </div>
           </div>
           <button class="p-2 bg-red-700 text-white w-full rounded-md">
@@ -128,5 +135,6 @@
         </div>
       </section>
     </main>
+    <script src="script/checkout.js"></script>
   </body>
 </html>
