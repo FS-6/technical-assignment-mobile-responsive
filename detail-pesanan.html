@@ -31,13 +31,13 @@
       <section class="max-w-3xl mx-auto px-5 mb-8">
         <h1 class="text-xl font-semibold mb-4">Detail Produk</h1>
         <div class="flex gap-5 p-2 border rounded-md bg-zinc-50 shadow-sm">
-          <img src="assets/product/pie.png" alt="product-img" class="h-full" />
+          <img id="product-img" src="" alt="product-img" class="h-[100px]" />
           <div class="w-full">
-            <h3 class="font-medium text-lg mb-[2px]">Pie Susu Khas Bali</h3>
+            <h3 class="font-medium text-lg mb-[2px]" id="product-name"></h3>
             <h5 class="mb-4 text-sm">Original</h5>
             <div class="flex justify-between">
-              <p>Rp. 55.000</p>
-              <span class="font-semibold">Total Rp. 110.000</span>
+              <p id="product-price"></p>
+              <span class="font-semibold" id="total-price"></span>
             </div>
           </div>
         </div>
@@ -90,5 +90,6 @@
         >
       </section>
     </main>
+    <script src="script/detailPesanan.js"></script>
   </body>
 </html>
