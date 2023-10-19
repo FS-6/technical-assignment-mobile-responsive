@@ -10,7 +10,6 @@ const incButton = document.getElementById("incButton");
 const decButton = document.getElementById("decButton");
 const totalOrder = document.getElementById("total-order");
 
-// get products by id
 async function getProductById() {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get("productId");
@@ -20,23 +19,25 @@ async function getProductById() {
   );
 
   const product = await response.json();
-  sessionStorage.setItem("product", JSON.stringify(product));
 
-  product.map((item) => {
+  if (Array.isArray(product) && product.length > 0) {
+    const item = product[0];
     productImage.src = item.image;
     productName.textContent = item.name;
     productPrice.textContent = `Rp. ${item.price}`;
     productFrom.textContent = item.from;
-  });
+    sessionStorage.setItem("product", JSON.stringify(item));
+  }
 }
 
 let price = 0;
 let total = 0;
 
 const productDetail = JSON.parse(sessionStorage.getItem("product"));
-productDetail.map((item) => {
-  price = item.price;
-});
+
+if (productDetail) {
+  price = productDetail.price;
+}
 
 totalOrder.textContent = "0";
 totalPrice.textContent = "Rp. 0";
@@ -48,10 +49,12 @@ incButton.onclick = () => {
 };
 
 decButton.onclick = () => {
-  total <= 0 ? 0 : (total -= 1);
-  totalOrder.textContent = total;
-  totalPrice.textContent = `Rp. ${price * total}`;
-  subTotal.textContent = `Rp. ${price * total}`;
+  if (total > 0) {
+    total -= 1;
+    totalOrder.textContent = total;
+    totalPrice.textContent = `Rp. ${price * total}`;
+    subTotal.textContent = `Rp. ${price * total}`;
+  }
 };
 
 getProductById();
