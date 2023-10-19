@@ -68,7 +68,7 @@ form.addEventListener("submit", (e) => {
 
   tarifKirim.textContent = `Metode Pengiriman : ${pengiriman} (${formatCurrency(
     ongkosKirim
-  )}`;
+  )})`;
   tarifBayar.textContent = `Metode Pembayaran : ${pembayaran}`;
 
   const shippingFees = JSON.parse(sessionStorage.getItem("shippingFee"));
