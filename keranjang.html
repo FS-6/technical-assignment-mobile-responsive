@@ -85,9 +85,9 @@
               </div>
               <div class="col">
                 <div class="input-group w-auto justify-content-end align-items-center">
-                  <input type="button" value="-" class="button-minus border rounded-circle icon-shape icon-sm mx-1 lh-0" data-field="quantity">
-                  <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
-                  <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm lh-0" data-field="quantity">
+                  <button type="button" class="btn btn-sm" id="decButton">-</button>
+                  <input type="amount" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25" min="0">
+                  <button type="button" class="btn btn-sm" id="incButton">+</button>
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@
             </div>
             <hr class="my-3">
             <h5 class="card-text font-weight-bold text-end">Rp 110.000</h5>
-            <a href="#" class="btn btn-danger w-100 mt-2">Beli Sekarang</a>
+            <a href="checkout.html" class="btn btn-danger w-100 mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
