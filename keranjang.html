@@ -10,7 +10,7 @@
 <body>
   <header class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="dashboard.html">
         <img src="/assets/logo/kulineri-logo.png" alt="Bootstrap">
       </a>
       <div class="sticky-top w-50">
@@ -64,30 +64,30 @@
     <div class="row">
       <div class="col">
         <h3 class="card-title">Keranjang</h3>
-        <p class="card-text">
+        <!-- <p class="card-text">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
             <label class="form-check-label" for="flexCheckChecked">Pilih Semua <i class="fas fa-trash text-danger"></i></label>
           </div>
-        </p>
+        </p> -->
         <hr class="my-4">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-          <label class="form-check-label" for="flexCheckChecked">
+        <div class="">
+          <!-- <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+          <label class="form-check-label" for="flexCheckChecked"> -->
             <div class="row">
               <div class="col-auto">
-                <img src="/assets/product/pie.png" alt="pie" class="pie">
+                <img id="product-img" src="" alt="pie" class="pie">
               </div>
               <div class="col">
-                <h6>Pie Susu</h6>
+                <h6 id="name"></h6>
                 <span class="card-text">Original</span>
-                <p class="card-text">Rp. 55.000</p>
+                <p id="price"></p>
               </div>
               <div class="col">
-                <div class="input-group w-auto justify-content-end align-items-center">
-                  <button type="button" class="btn btn-sm" id="decButton">-</button>
-                  <input type="amount" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25" min="0">
-                  <button type="button" class="btn btn-sm" id="incButton">+</button>
+                <div class="d-flex align-items-start gap-">
+                  <button type="button" class="btn border" id="decButton">-</button>
+                  <p id="total-order"></p>
+                  <button type="button" class="btn border" id="incButton">+</button>
                 </div>
               </div>
             </div>
@@ -100,15 +100,16 @@
             <h6 class="card-title">Ringkasan Belanja</h6>
             <div class="d-flex justify-content-between">
               <p class="card-text">Subtotal:</p>
-              <p class="card-text text-end">Rp 110.000</p>
+              <p class="card-text text-end" id="subtotal"></p>
             </div>
             <hr class="my-3">
-            <h5 class="card-text font-weight-bold text-end">Rp 110.000</h5>
+            <h5 class="card-text font-weight-bold text-end"></h5>
             <a href="checkout.html" class="btn btn-danger w-100 mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <script src="script/cart.js"></script>
 </body>
 </html>
