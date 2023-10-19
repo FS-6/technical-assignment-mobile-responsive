@@ -15,6 +15,7 @@ const opsiPengiriman = document.getElementById("opsi-pengiriman");
 const opsiPembayaran = document.getElementById("opsi-pembayaran");
 const tarifKirim = document.getElementById("tarif-pengiriman");
 const tarifBayar = document.getElementById("tarif-pembayaran");
+const buyBtn = document.getElementById("buy-btn");
 
 const productPriceTotal = document.getElementById("product-price-end");
 const shippingFee = document.getElementById("shipping-fee");
@@ -86,5 +87,10 @@ productPrice.textContent = `${formatCurrency(product.price)} x ${totalItem}`;
 totalPrice.textContent = formatCurrency(mustPay);
 
 productPriceTotal.textContent = formatCurrency(mustPay);
-shippingFee.textContent = formatCurrency(Number(shippingFees));
+shippingFee.textContent = `Rp. 0`;
 subTotal.textContent = formatCurrency(Number(mustPay) + Number(shippingFees));
+
+buyBtn.onclick = () => {
+  alert("pembayaran berhasil!");
+  window.location.href = "detail-pesanan.html";
+};
